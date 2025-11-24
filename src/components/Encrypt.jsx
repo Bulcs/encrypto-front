@@ -11,10 +11,12 @@ const Encrypt = ({ method }) => {
 
   const [selectedOption, setSelectedOption] = React.useState("12");
 
+  const LINK_FETCH = "https://your-backend.vercel.app/api";
+
   const handleEncrypt = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:4000/api/encrypt", {
+    fetch(`${LINK_FETCH}/encrypt`, {
       method: "POST",
       body: JSON.stringify({
         text: textToEncrypt.join(","),
@@ -31,7 +33,7 @@ const Encrypt = ({ method }) => {
   const handleDecrypt = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:4000/api/decrypt", {
+    fetch(`${LINK_FETCH}/decrypt`, {
       method: "POST",
       body: JSON.stringify({ text: textToDecrypt, pass: passDecrypt }),
       headers: { "Content-Type": "application/json" },
