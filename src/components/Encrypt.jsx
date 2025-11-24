@@ -11,7 +11,8 @@ const Encrypt = ({ method }) => {
 
   const [selectedOption, setSelectedOption] = React.useState("12");
 
-  const LINK_FETCH = "https://your-backend.vercel.app/api";
+  const LINK_FETCH =
+    "https://encrypto-back-bulcs-bulcs-projects.vercel.app/api";
 
   const handleEncrypt = (e) => {
     e.preventDefault();
