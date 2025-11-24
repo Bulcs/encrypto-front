@@ -61,10 +61,10 @@ const About = () => {
           </p>
         </section>
 
-        <footer className="about-footer">
+        <section className="about-footer">
           <h2>We Just Want to Be FREE from THEM!</h2>
           <div className="about-emoji">👁️</div>
-        </footer>
+        </section>
       </div>
     </div>
   );

@@ -23,6 +23,25 @@ function App() {
         <Route path="/decrypt" element={<Encrypt method="decrypt" />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <footer className="container-git-links">
+        <div className="git-links">
+          <a
+            href="https://github.com/Bulcs/encrypto-back"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Backend GitHub
+          </a>
+          <a
+            href="https://github.com/Bulcs/encrypto-front"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Frontend GitHub
+          </a>
+        </div>
+      </footer>
     </BrowserRouter>
   );
 }

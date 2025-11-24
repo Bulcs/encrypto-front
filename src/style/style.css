@@ -81,6 +81,19 @@ body {
 }
 
 /* ================================================================
+   HOME SECTION
+   ================================================================ */
+
+.home-main-txt {
+  font-size: clamp(1.8rem, 6vw, 6.2rem);
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+/* ================================================================
    ENCRYPT SECTION
    ================================================================ */
 
@@ -91,6 +104,7 @@ body {
   justify-content: center;
   height: 94vh;
   color: var(--text-primary);
+  margin-bottom: 32px;
 }
 
 .select-form {
@@ -352,6 +366,60 @@ body {
   25%,
   75% {
     opacity: 0.5;
+  }
+}
+
+.container-git-links {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  padding: calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px))
+    var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border-top: 2px solid var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 56px;
+}
+
+.container-git-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  margin: 0 var(--spacing-md);
+}
+
+.container-git-links a:hover {
+  color: #646cff;
+}
+
+@media (max-width: 768px) {
+  .container-git-links {
+    gap: var(--spacing-sm);
+    padding: calc(var(--spacing-md) + env(safe-area-inset-bottom, 0px))
+      var(--spacing-md);
+  }
+  .container-git-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-git-links {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: calc(var(--spacing-sm) + env(safe-area-inset-bottom, 0px))
+      var(--spacing-sm);
+    min-height: auto;
+  }
+  .container-git-links a {
+    font-size: 12px;
   }
 }
 
