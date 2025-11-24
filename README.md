@@ -1,18 +1,45 @@
-# React + Vite
+# Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Encrypto Project](encrypto-project.netlify.app)
 
-Currently, two official plugins are available:
+## How Does Encrypto Work?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Encrypto is an Open Source Web application that allows users to encrypt the 12 or 24 keywords used in cryptocurrency wallets.  
+Basically, it's a new way to hide your keys safely and securely.
 
-## React Compiler
+We **do not store your keys**, your password, or your encrypted data.  
+Everything is processed on the **client side**, ensuring your information remains completely private and secure.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Security & Encryption
 
-## Expanding the ESLint configuration
+The encryption algorithm used is **AES (Advanced Encryption Standard)** with a **256-bit key size**, widely recognized as one of the most secure encryption methods available.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Encryption and decryption are performed using the **CryptoJS** library, a well-known JavaScript library for cryptographic operations.
+
+When you enter your keywords and password, the application uses AES to encrypt your keywords with the provided password.  
+The encrypted output is displayed for you to copy and store securely.
+
+---
+
+## How to Decrypt Your Keys
+
+To decrypt your keywords:
+
+1. Enter the encrypted data  
+2. Provide the **same password** you used for encryption
+
+The application will use AES to decrypt and restore your original keywords.
+
+⚠️ Always use a **strong and unique password**.  
+If you lose the encrypted data or the password, you may **permanently lose access** to your recovery keywords.
+
+---
+
+## Responsibility & Safety
+
+By using this application, you acknowledge that **you are responsible** for the security of your keywords and password.
+
+Store them safely and correctly.  
+Take all necessary precautions to protect your encrypted data and recovery passwords.
