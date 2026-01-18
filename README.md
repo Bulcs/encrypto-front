@@ -1,6 +1,6 @@
 # Website
 
-[Encrypto Project](encrypto-project.netlify.app)
+encrypto-project.netlify.app
 
 ## How Does Encrypto Work?
 
